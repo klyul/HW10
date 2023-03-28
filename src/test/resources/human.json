@@ -1,0 +1,10 @@
+{
+  "name": "Yuliya",
+  "age": 30,
+  "isClever": true,
+  "hobbies": ["Volleyball", "Wine"],
+  "passport": {
+    "number": 3112453425,
+    "issueDate": "14 JAN 2021"
+  }
+}
