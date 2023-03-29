@@ -15,13 +15,14 @@ public class JsonParsingTest {
         try (InputStream is = cl.getResourceAsStream("human.json");
              InputStreamReader isr = new InputStreamReader(is)) {
 
-            HumanTests game = mapper.readValue(isr, HumanTests.class);
+            HumanTests humanTests = mapper.readValue(isr, HumanTests.class);
 
-            Assertions.assertEquals("Morrowind", game.name);
-            Assertions.assertEquals(2003, game.releasedata);
-            Assertions.assertEquals(List.of("RPG","Action"), game.genre);
-            Assertions.assertTrue(game.singleplayer);
-            Assertions.assertEquals(999,game.price);
+            Assertions.assertEquals("Yuliya", humanTests.name);
+            Assertions.assertEquals(30, humanTests.age);
+            Assertions.assertEquals(List.of("Volleyball", "Wine"), humanTests.hobbies);
+            Assertions.assertTrue(humanTests.isClever);
+            Assertions.assertEquals(3112453425L,humanTests.passport.number);
+            Assertions.assertEquals("14 JAN 2021",humanTests.passport.issueDate);
         }
     }
 }
